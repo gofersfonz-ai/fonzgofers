@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sydney XP</title>
+    <link rel="stylesheet" href="style 2.css">
+<!-- De standaard favicon voor de meeste browsers -->
+    <link rel="icon" type="image/png" href="favicon.png">
+    
+    <!-- Optioneel: Voor Apple apparaten (als men de site op het homescherm zet) -->
+    <link rel="apple-touch-icon" href="favicon.png">
+    <header class="top-bar">
+  <h2>Sydney XP</h2>
+  <a href="index.html" class="home-link">Terug</a>
+</header>
+
+</head>
+
+<body>
+<div class="background"></div>
+
+<div class="container">
+
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/Njx2r5tao_k?si=jsnBz5ws-MgmWEN8" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+  
+  <div class="tekst-vak">
+
+   <p> Sydney XP is een visuele en technische poging tot een bepaalde esthetische trend, populair van 1990 tot 2004, opnieuw tot leven te brengen in de vorm van beeld en geluid. Deze trend kenmerkt zich door de 'diepe' muziek, vroege digitale beeldkwaliteit en het gebruik van visueel optimisme zoals een wereldbol en glazen wolkenkrabbers.  
+</p>
+  </div>
+</div>
+
+<footer>
+  <p><span id="copyright-jaar"></span> Citrus - Raul Fernandes</p>
+</footer>
+
+<script>
+  const vandaag = new Date();
+  
+  // Formatteer de datum naar de Nederlandse standaard
+  const opties = { day: 'numeric', month: 'long', year: 'numeric' };
+  const datumGeformatteerd = vandaag.toLocaleDateString('nl-NL', opties);
+
+  document.getElementById("copyright-jaar").textContent = datumGeformatteerd;
+</script>
+
+
+
+
+
+</body>
