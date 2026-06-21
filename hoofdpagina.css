@@ -1,5 +1,5 @@
 body {
-    background-color: #FFFFFF; /* Diep, sfeervol donkergrijs/zwart */
+    background-color: #FFFFFF; 
     color: #000000;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
@@ -16,7 +16,7 @@ body {
 /* De 5 kolommen verdeling: 1 voor het jaartal (smal) + 4 voor de categorieën */
 .grid-header, .portfolio-grid {
     display: grid;
-    grid-template-columns: 80px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
     gap: 40px 30px; /* Ruime gap zorgt voor het 'zwevende' effect */
 }
 
@@ -38,14 +38,13 @@ body {
 .year-label {
     font-size: 1.1rem;
     font-weight: 300;
-    color: #000000; /* Donkerder grijs, aanwezig maar eist de aandacht niet op */
-    letter-spacing: 1px;
+    color: #000000; 
     padding-top: 4px;
 }
 
-/* De cellen waar de werken in zweven */
+
 .grid-cell {
-    min-height: 60px;
+    min-height: 80px;
     display: flex;
     align-items: flex-start;
 }
