@@ -34,10 +34,10 @@ html, body {
 }
 
 .category-title {
-    font-size: 0.85rem;
+    font-size: 1rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #777777;
+    color: #000000;
     font-weight: 400;
 }
 
@@ -60,22 +60,72 @@ html, body {
 
 .grid-cell {
     display: flex;
-    align-items: center; /* Zorgt dat je werk mooi gecentreerd 'zweeft' in zijn rij */
+    flex-direction: column;
+    justify-content: center;
+    gap: 12px; /* Ruimte tussen opeenvolgende projecten in dezelfde cel */
+    width: 100%;
 }
 
-/* 7. De links naar de projecten */
+/* --- BASE STYLING VAN DE PROJECTEN --- */
 .project-link {
-    color: #ffffff;
+    color: #000000;
     text-decoration: none;
+    line-height: 1.2;
+    transition: all 0.3s ease;
+    display: block; 
+}
+
+/* --- BOUWSTEEN 1: RICHTING / LEUNEN --- */
+.p-midden {
+    align-self: center;
+    text-align: center;
+    width: fit-content;
+}
+
+.p-rechts {
+    align-self: flex-end; /* Dit duwt ALLEEN deze link naar de rechterkant van de cel */
+    text-align: right;
+    transform: translateX(-5px); /* Subtiele verschuiving */
+}
+
+.p-links {
+    align-self: flex-start; /* Dit duwt ALLEEN deze link naar de linkerkant van de cel */
+    text-align: left;
+    transform: translateX(5px);
+}
+
+/* --- BOUWSTEEN 2: GROOTTE (FONT-SIZE) --- */
+.p-groot {
+    font-size: 1.25rem;
+    font-weight: 400;
+}
+
+.p-normaal {
     font-size: 1rem;
     font-weight: 300;
-    letter-spacing: 0.5px;
-    line-height: 1.4;
-    transition: color 0.3s ease, transform 0.3s ease;
-    display: inline-block;
 }
 
+.p-klein {
+    font-size: 0.85rem;
+    font-weight: 300;
+    letter-spacing: 1px;
+}
+
+/* --- BOUWSTEEN 3: FONT KLEUREN --- */
+.p-kleur-fel {
+    color: #000000; /* Knallend wit */
+}
+
+.p-kleur-subtiel {
+    color: #9f4444; /* Zacht, sfeervol grijs */
+}
+
+.p-kleur-diep {
+    color: #511a82; /* Donkergrijs, trekt zich bijna terug in de achtergrond */
+}
+
+/* --- UNIEKE HOVER VOOR DE DYNAMIEK --- */
 .project-link:hover {
-    color: #a5a5a5;
-    transform: translateX(4px);
+    color: #ff0606 !important; /* Wordt altijd zachtgrijs bij hover */
+    transform: scale(1.02); /* Licht groter worden in plaats van alleen verschuiven */
 }
