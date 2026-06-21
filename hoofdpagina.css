@@ -1,55 +1,69 @@
-body {
-    background-color: #FFFFFF; 
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100vw;
+    height: 100vh;
+    overflow: hidden; /* Dit sloopt de scrollbar en zet het scherm vast */
+    background-color: #ffffff;
     color: #000000;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
-    margin: 0;
-    padding: 60px;
-    display: flex;
-    justify-content: center;
+    box-sizing: border-box;
 }
 
+/* 2. De container vult het volledige scherm met een vaste marge */
 .portfolio-container {
     width: 100%;
-    max-width: 1200px;
+    height: 100%;
+    padding: 60px; /* De ademruimte rondom je grid */
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
 }
 
-/* De 5 kolommen verdeling: 1 voor het jaartal (smal) + 4 voor de categorieën */
+/* 3. De 5 kolommen (1 voor jaar, 4 voor categorieën) */
 .grid-header, .portfolio-grid {
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
-    gap: 40px 60px; /* Ruime gap zorgt voor het 'zwevende' effect */
+    grid-template-columns: 80px 1fr 1fr 1fr 1fr;
+    gap: 0px 30px; /* We zetten de verticale gap op 0, dat regelt de hoogte nu */
 }
 
-/* Categorie koppen bovenin */
+/* 4. De bovenste rij met de categorieën */
 .grid-header {
-    margin-bottom: 50px;
-    border-bottom: none; /* Geen harde lijnen */
+    height: 50px; /* Vaste hoogte voor de koppen */
+    align-items: center;
 }
 
 .category-title {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #000000; /* Subtiel grijs zodat je werk eruit springt */
+    color: #777777;
     font-weight: 400;
 }
 
-/* Jaartallen aan de linkerkant */
+/* 5. Het eigenlijke grid vult de RESTERENDE ruimte van het scherm */
+.portfolio-grid {
+    flex-grow: 1; /* Slurpt alle overgebleven verticale ruimte op */
+    /* Zorgt dat de rijen (je jaartallen) de hoogte evenredig verdelen */
+    grid-template-rows: repeat(7, 1fr); 
+}
+
+/* 6. Jaartallen en Cellen perfect uitlijnen binnen hun vloeiende hoogte */
 .year-label {
     font-size: 1.1rem;
     font-weight: 300;
-    color: #000000; 
-    padding-top: 4px;
+    color: #444444;
+    letter-spacing: 1px;
+    display: flex;
+    align-items: center; /* Centreert het jaartal verticaal in zijn rij */
 }
-
 
 .grid-cell {
-    min-height: 60px;
     display: flex;
-    align-items: flex-start;
+    align-items: center; /* Zorgt dat je werk mooi gecentreerd 'zweeft' in zijn rij */
 }
 
-/* De links naar de projecten */
+/* 7. De links naar de projecten */
 .project-link {
     color: #ffffff;
     text-decoration: none;
@@ -61,8 +75,7 @@ body {
     display: inline-block;
 }
 
-/* Subtiele interactie als je er met de muis op zweeft */
 .project-link:hover {
-    color: #a5a5a5; /* Kleurt zacht grijs */
-    transform: translateX(4px); /* Schuift een heel klein beetje op naar rechts */
+    color: #a5a5a5;
+    transform: translateX(4px);
 }
