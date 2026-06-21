@@ -16,13 +16,13 @@ body {
 /* De 5 kolommen verdeling: 1 voor het jaartal (smal) + 4 voor de categorieën */
 .grid-header, .portfolio-grid {
     display: grid;
-    grid-template-columns: 100px 1fr 1fr 1fr 1fr;
+    grid-template-columns: 300px 1fr 1fr 1fr 1fr;
     gap: 40px 30px; /* Ruime gap zorgt voor het 'zwevende' effect */
 }
 
 /* Categorie koppen bovenin */
 .grid-header {
-    margin-bottom: 100px;
+    margin-bottom: 50px;
     border-bottom: none; /* Geen harde lijnen */
 }
 
