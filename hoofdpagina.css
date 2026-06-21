@@ -1,6 +1,6 @@
 body {
-    background-color: #0d0d0d; /* Diep, sfeervol donkergrijs/zwart */
-    color: #e5e5e5;
+    background-color: #FFFFFF; /* Diep, sfeervol donkergrijs/zwart */
+    color: #000000;
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
     margin: 0;
     padding: 60px;
@@ -30,7 +30,7 @@ body {
     font-size: 0.85rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: #777777; /* Subtiel grijs zodat je werk eruit springt */
+    color: #000000; /* Subtiel grijs zodat je werk eruit springt */
     font-weight: 400;
 }
 
@@ -38,7 +38,7 @@ body {
 .year-label {
     font-size: 1.1rem;
     font-weight: 300;
-    color: #444444; /* Donkerder grijs, aanwezig maar eist de aandacht niet op */
+    color: #000000; /* Donkerder grijs, aanwezig maar eist de aandacht niet op */
     letter-spacing: 1px;
     padding-top: 4px;
 }
