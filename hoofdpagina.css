@@ -1,0 +1,69 @@
+body {
+    background-color: #0d0d0d; /* Diep, sfeervol donkergrijs/zwart */
+    color: #e5e5e5;
+    font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    margin: 0;
+    padding: 60px;
+    display: flex;
+    justify-content: center;
+}
+
+.portfolio-container {
+    width: 100%;
+    max-width: 1200px;
+}
+
+/* De 5 kolommen verdeling: 1 voor het jaartal (smal) + 4 voor de categorieën */
+.grid-header, .portfolio-grid {
+    display: grid;
+    grid-template-columns: 80px 1fr 1fr 1fr 1fr;
+    gap: 40px 30px; /* Ruime gap zorgt voor het 'zwevende' effect */
+}
+
+/* Categorie koppen bovenin */
+.grid-header {
+    margin-bottom: 50px;
+    border-bottom: none; /* Geen harde lijnen */
+}
+
+.category-title {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #777777; /* Subtiel grijs zodat je werk eruit springt */
+    font-weight: 400;
+}
+
+/* Jaartallen aan de linkerkant */
+.year-label {
+    font-size: 1.1rem;
+    font-weight: 300;
+    color: #444444; /* Donkerder grijs, aanwezig maar eist de aandacht niet op */
+    letter-spacing: 1px;
+    padding-top: 4px;
+}
+
+/* De cellen waar de werken in zweven */
+.grid-cell {
+    min-height: 60px;
+    display: flex;
+    align-items: flex-start;
+}
+
+/* De links naar de projecten */
+.project-link {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1rem;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    line-height: 1.4;
+    transition: color 0.3s ease, transform 0.3s ease;
+    display: inline-block;
+}
+
+/* Subtiele interactie als je er met de muis op zweeft */
+.project-link:hover {
+    color: #a5a5a5; /* Kleurt zacht grijs */
+    transform: translateX(4px); /* Schuift een heel klein beetje op naar rechts */
+}
